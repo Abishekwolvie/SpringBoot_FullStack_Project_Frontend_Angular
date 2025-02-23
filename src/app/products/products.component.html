@@ -1,0 +1,34 @@
+<p>products works!</p>
+<a routerLink="/login" style="float: right;"><button>Logout</button></a>
+<label>Filter products</label>
+<label>
+    Brand
+</label>
+<select [(ngModel)]="selectedbrand" (change)="filterbybrands()">
+    <option value="" >--Select Brands--</option>
+    <option *ngFor="let brands of laptopbrands" value="{{brands.brandname}}" >{{brands.brandname}}</option>
+</select>
+<table [ngStyle]="{'width':'1000px', 'height':'100px'}">
+    <thead>
+        <th>Brand Name</th>
+        <th>Model</th>
+        <th>os</th>
+        <th>Graphics card</th>
+        <th>Processor</th>
+        <th>Storage</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productsarray">
+            <td>{{product.brand}}</td>
+            <td>{{product.model}}</td>
+            <td>{{product.os}}</td>
+            <td>{{product.graphicscard}}</td>
+            <td>{{product.processor}}</td>
+            <td>{{product.storage%1000==0 ? product.storage+" GB":product.storage+" TB"}}</td>
+            <td>{{product.price|currency:'INR'}}</td>
+            <td><button (click)="addproductstocart(product.id)">Add to cart</button></td>
+        </tr>
+
+    </tbody>
+</table>
