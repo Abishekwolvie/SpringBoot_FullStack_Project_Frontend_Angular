@@ -1,0 +1,30 @@
+
+
+
+
+
+<div class="container">
+    <form #loginform="ngForm" (submit)="loginUser(loginform)">
+        <p>
+            <label for="username">Enter Username </label>
+            <input type="text" name="email" id="email" required  #email="ngModel" ngModel >
+            <br>
+            <span [ngStyle]="{'color':'red', 'font-weight':'bold'}" *ngIf="email.invalid && email.touched">Enter the Username</span>
+        </p>
+        <p>
+            <label for="password">Enter password</label>
+            <input type="password" name="password" id="password" required  #password="ngModel" ngModel>
+            <br>
+            <span [ngStyle]="{'color':'red', 'font-weight':'bold'}" *ngIf="password.invalid && password.touched">Enter the Password</span>
+        </p>
+        <p>
+            <input type="submit" value="Login" [disabled]="loginform.invalid">
+        </p>
+    </form>
+
+</div>
+
+
+
+
+
