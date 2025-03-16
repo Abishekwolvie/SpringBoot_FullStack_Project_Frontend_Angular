@@ -1,1 +1,32 @@
+<<<<<<< HEAD
 <p>cart works!</p>
+=======
+<div  >
+<p>cart works!</p>
+<a routerLink="/login" style="float: right;"><button>Logout</button></a>
+
+<table [ngStyle]="{'width':'1000px', 'height':'100px'}"  >
+    <thead>
+        <th>Brand name</th>
+        <th>Model</th>
+        <th>OS</th>
+        <th>Graphics card</th>
+        <th>Processor</th>
+        <th>Storage</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cart of cartproducts">
+            <td>{{cart.brand}}</td>
+            <td>{{cart.model}}</td>
+            <td>{{cart.os}}</td>
+            <td>{{cart.graphicscard}}</td>
+            <td>{{cart.processor}}</td>
+            <td>{{cart.storage}}</td>
+            <td>{{cart.price}}</td>
+            <td><button (click)="deletefromcart(cart)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+>>>>>>> master

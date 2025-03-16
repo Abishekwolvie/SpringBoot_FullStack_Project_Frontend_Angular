@@ -7,5 +7,9 @@ export interface Cart {
     graphicscard:string;
     userid:string|null;
     price:number;
+<<<<<<< HEAD
+=======
+    productid:number;
+>>>>>>> master
 
 }

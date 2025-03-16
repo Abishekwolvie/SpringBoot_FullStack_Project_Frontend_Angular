@@ -28,7 +28,12 @@ export class ProductsComponent implements OnInit{
     price:0,
     processor:"",
     storage:0,
+<<<<<<< HEAD
     userid:""
+=======
+    userid:"",
+    productid:0
+>>>>>>> master
   }
 
   laptopbrands:Brands[]=[];
@@ -53,7 +58,10 @@ export class ProductsComponent implements OnInit{
 
     //getting products using product id
     this.productserviceobj.getproductsbyid(id).subscribe((value)=>{
+<<<<<<< HEAD
       //console.log(value);
+=======
+>>>>>>> master
       //console.log(localStorage.getItem("useremail"));
       this.cartproduct.storage=value.storage;
       this.cartproduct.processor = value.processor;
@@ -67,7 +75,11 @@ export class ProductsComponent implements OnInit{
 
       //add products to cart
       this.cartserviceobj.addtocart(this.cartproduct).subscribe((value)=>{
+<<<<<<< HEAD
 
+=======
+        alert(this.cartproduct.brand+" "+this.cartproduct.model+" added to cart");
+>>>>>>> master
       });
 
       

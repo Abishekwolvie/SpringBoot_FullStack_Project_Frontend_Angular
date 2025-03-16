@@ -1,10 +1,18 @@
 <p>products works!</p>
 <a routerLink="/login" style="float: right;"><button>Logout</button></a>
+<<<<<<< HEAD
+=======
+<a routerLink="/cart" [ngStyle]="{'float':'right'}"><button>cart</button></a>
+>>>>>>> master
 <label>Filter products</label>
 <label>
     Brand
 </label>
+<<<<<<< HEAD
 <select [(ngModel)]="selectedbrand" (change)="filterbybrands()">
+=======
+<select [(ngModel)]="selectedbrand" (change)="filterbybrands()" >
+>>>>>>> master
     <option value="" >--Select Brands--</option>
     <option *ngFor="let brands of laptopbrands" value="{{brands.brandname}}" >{{brands.brandname}}</option>
 </select>
@@ -32,3 +40,8 @@
 
     </tbody>
 </table>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
